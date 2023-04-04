@@ -2,7 +2,7 @@
 
 
 
-# To run repositary
+# To run 
 ## Another terminal:
 ### (EVERYTIME CHANGES ARE MADE TO THE PACKAGE CD TO THE ~/dev_ws/ folder): <br>
 •	Colcon build <br>
