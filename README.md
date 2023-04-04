@@ -3,20 +3,20 @@
 
 
 # To run 
-## Another terminal #1:
+## Terminal #1:
 ### (EVERYTIME CHANGES ARE MADE TO THE PACKAGE CD TO THE ~/dev_ws/ folder): <br>
 •	Colcon build <br>
 •	source ~/dev_ws/install/setup.bash <br>
 
-## Open another terminal #2:
+## Terminal #2:
 ### to get the turtlesim simulator running
 ros2 run turtlesim turtlesim_node <br>
 
-## Open another terminal #3:
+## Terminal #3:
 ### To run the main python file:
 •	ros2 run usi_angry_turtle move2goal – this is the command to get the python script to run. <br>
 
-## Open another terminal #4:
+## Terminal #4:
 •	sudo apt update <br>
 •	sudo apt install ~nros-humble-rqt* <br>
 •	rqt <br>
@@ -24,12 +24,12 @@ ros2 run turtlesim turtlesim_node <br>
 •	change the x and y to 1.0 <br>
 •	then press call near the service area. This will spawn the other turtle make sure your running the turtlesim window (ros2 run turtlesim turtlesim_node) in another terminal. <br>
 
-## Another terminal #5:
+## Terminal #5:
 ### (TO SPAWN A NEW TURTLE)
 •	ros2 service call /spawn turtlesim/srv/Spawn '{x: 2.0, y: 2.0, theta: 0.0, name: turtle2}' 'turtle2' can be changed to any name you want <br>
 •	you can press any arrow to control the spawned turtle to go in any direction.
 
-## Open another terminal #6: 
+## Terminal #6: 
 ### to get the spawned turtle to move by itself
 •	ros2 topic pub --rate 1 /turtle2/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}}" <br>
 
