@@ -1,0 +1,31 @@
+running egg_info
+creating build/usi_angry_turtle/usi_angry_turtle.egg-info
+writing build/usi_angry_turtle/usi_angry_turtle.egg-info/PKG-INFO
+writing dependency_links to build/usi_angry_turtle/usi_angry_turtle.egg-info/dependency_links.txt
+writing entry points to build/usi_angry_turtle/usi_angry_turtle.egg-info/entry_points.txt
+writing requirements to build/usi_angry_turtle/usi_angry_turtle.egg-info/requires.txt
+writing top-level names to build/usi_angry_turtle/usi_angry_turtle.egg-info/top_level.txt
+writing manifest file 'build/usi_angry_turtle/usi_angry_turtle.egg-info/SOURCES.txt'
+reading manifest file 'build/usi_angry_turtle/usi_angry_turtle.egg-info/SOURCES.txt'
+writing manifest file 'build/usi_angry_turtle/usi_angry_turtle.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/robotics23/dev_ws/src/usi_angry_turtle/build/usi_angry_turtle/build
+creating /home/robotics23/dev_ws/src/usi_angry_turtle/build/usi_angry_turtle/build/lib
+creating /home/robotics23/dev_ws/src/usi_angry_turtle/build/usi_angry_turtle/build/lib/usi_angry_turtle
+copying usi_angry_turtle/__init__.py -> /home/robotics23/dev_ws/src/usi_angry_turtle/build/usi_angry_turtle/build/lib/usi_angry_turtle
+running install
+running install_lib
+creating /home/robotics23/dev_ws/src/usi_angry_turtle/install/usi_angry_turtle/lib/python3.10/site-packages/usi_angry_turtle
+copying /home/robotics23/dev_ws/src/usi_angry_turtle/build/usi_angry_turtle/build/lib/usi_angry_turtle/__init__.py -> /home/robotics23/dev_ws/src/usi_angry_turtle/install/usi_angry_turtle/lib/python3.10/site-packages/usi_angry_turtle
+byte-compiling /home/robotics23/dev_ws/src/usi_angry_turtle/install/usi_angry_turtle/lib/python3.10/site-packages/usi_angry_turtle/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/robotics23/dev_ws/src/usi_angry_turtle/install/usi_angry_turtle/share/ament_index
+creating /home/robotics23/dev_ws/src/usi_angry_turtle/install/usi_angry_turtle/share/ament_index/resource_index
+creating /home/robotics23/dev_ws/src/usi_angry_turtle/install/usi_angry_turtle/share/ament_index/resource_index/packages
+copying resource/usi_angry_turtle -> /home/robotics23/dev_ws/src/usi_angry_turtle/install/usi_angry_turtle/share/ament_index/resource_index/packages
+copying package.xml -> /home/robotics23/dev_ws/src/usi_angry_turtle/install/usi_angry_turtle/share/usi_angry_turtle
+running install_egg_info
+Copying build/usi_angry_turtle/usi_angry_turtle.egg-info to /home/robotics23/dev_ws/src/usi_angry_turtle/install/usi_angry_turtle/lib/python3.10/site-packages/usi_angry_turtle-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/robotics23/dev_ws/src/usi_angry_turtle/build/usi_angry_turtle/install.log'
