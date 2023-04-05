@@ -57,6 +57,10 @@ ros2 run turtlesim turtlesim_node <br>
 (1, 2)<br>
 (0.8, 5.544445)<br>
 
-The result of running the code to write USI with how to write it<br>
+1.The result of running the code to write USI with how to write it<br>
 ![](http://url/to/img.png)<img width="1375" alt="Screenshot 2023-04-05 at 06 30 26" src="https://user-images.githubusercontent.com/44726422/229989626-d98684e8-a97c-4df9-8888-946d19a35487.png">
+
+
+2.When the turtle is less than 1 meter of the other turtle, the turtle becomes angry, stops writing and starts pursuing the other turtle
+<img width="1465" alt="Screenshot 2023-04-05 at 06 44 05" src="https://user-images.githubusercontent.com/44726422/229991544-cd7990f1-dbf2-4bbd-85d2-130e258a2b65.png">
 
