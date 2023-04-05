@@ -38,6 +38,7 @@ ros2 run turtlesim turtlesim_node <br>
 ### To write usi with main turtle from #3 terminal:
 •	in thE terminal where this line is running 'ros2 run usi_angry_turtle move2goal', enter the points as follows : <br>
 <br>
+*NB - Make sure to spawn the turle first in the rqt before continuing <br>
 *NB - THE FIRST POINT IS THE X, THE SECOND IS THE Y AND THE TOLERANCE IS 0.2 IN ALL CASE. <br>
 *NB - BEFORE INPUTTING EACH POINT, THE LINE 'ros2 run usi_angry_turtle move2goal' MUST BE RAN IN THE TERMINAL [MANUAL] <br>
 <br>
