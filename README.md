@@ -41,21 +41,21 @@ ros2 run turtlesim turtlesim_node <br>
 <br>
 **points writes I** <br>
 
-(5.54445, 3)<br>
-()<br>
+(5.544445, 2)<br>
+(5.544445, 4.9)<br>
 
 **points writes S** <br>
 (4, 5.544445)<br>
 (4, 3.5)<br>
-(5.5, 3.5)<br>
-(5, 2)<br>
+(4.6, 3.5)<br>
+(4.6, 2)<br>
 (4, 2)<br>
 
 **points writes U** <br>
-(2, 5.544445)<br>
+(3.5, 5.544445)<br>
 (2, 2)<br>
 (1, 2)<br>
-(0.8, 5.54445)<br>
+(0.8, 5.544445)<br>
 
 The result of running the code to write USI with how to write it<br>
 ![](http://url/to/img.png)<img width="1375" alt="Screenshot 2023-04-05 at 06 30 26" src="https://user-images.githubusercontent.com/44726422/229989626-d98684e8-a97c-4df9-8888-946d19a35487.png">
