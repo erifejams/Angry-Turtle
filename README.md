@@ -25,13 +25,15 @@ ros2 run turtlesim turtlesim_node <br>
 •	then press call near the service area. This will spawn the other turtle make sure your running the turtlesim window (ros2 run turtlesim turtlesim_node) in another terminal. <br>
 
 ## Terminal #5:
-### (TO SPAWN A NEW TURTLE)
+### (TO SPAWN A NEW TURTLE) - this can be done using the previous command so can skip
 •	ros2 service call /spawn turtlesim/srv/Spawn '{x: 2.0, y: 2.0, theta: 0.0, name: turtle2}' 'turtle2' can be changed to any name you want <br>
-•	you can press any arrow to control the spawned turtle to go in any direction.
+•	you can press any arrow to control the spawned turtle to go in any direction. <br>
 
 ## Terminal #6: 
 ### to get the spawned turtle to move by itself
 •	ros2 topic pub --rate 1 /turtle2/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}}" <br>
+• rosrun turtlesim turtle_teleop_key --ros-args --remap turtle1/cmd_vel:=turtle2/cmd_vel <br>
+
 
 ### To write usi with main turtle from #3 terminal:
 •	in thE terminal where this line is running 'ros2 run usi_angry_turtle move2goal', enter the points as follows : <br>
@@ -63,4 +65,11 @@ ros2 run turtlesim turtlesim_node <br>
 
 2.When the turtle is less than 1 meter of the other turtle, the turtle becomes angry, stops writing and starts pursuing the other turtle
 <img width="1465" alt="Screenshot 2023-04-05 at 06 44 05" src="https://user-images.githubusercontent.com/44726422/229991544-cd7990f1-dbf2-4bbd-85d2-130e258a2b65.png">
+
+
+3. Spawn more than 1 turtle (make a separate terminal to run the other turtle with this command ' rosrun turtlesim turtle_teleop_key --ros-args --remap turtle1/cmd_vel:=turtle2/cmd_vel'
+(change the turtle name) <br>
+<img width="1476" alt="Screenshot 2023-04-05 at 06 50 42" src="https://user-images.githubusercontent.com/44726422/229992994-849b671b-808c-4df6-8d5c-487eea3c70b4.png">
+tle1/cmd_vel:=turtle2/cmd_vel
+')
 
