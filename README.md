@@ -40,6 +40,7 @@ ros2 run turtlesim turtlesim_node <br>
 *NB - BEFORE INPUTTING EACH POINT, THE LINE 'ros2 run usi_angry_turtle move2goal' MUST BE RAN IN THE TERMINAL [MANUAL] <br>
 <br>
 **points writes I** <br>
+
 (5.54445, 3)<br>
 ()<br>
 
@@ -55,3 +56,7 @@ ros2 run turtlesim turtlesim_node <br>
 (2, 2)<br>
 (1, 2)<br>
 (0.8, 5.54445)<br>
+
+The result of running the code to write USI with how to write it<br>
+![The result of running the code to write USI](http://url/to/img.png)<img width="1375" alt="Screenshot 2023-04-05 at 06 30 26" src="https://user-images.githubusercontent.com/44726422/229989626-d98684e8-a97c-4df9-8888-946d19a35487.png">
+
