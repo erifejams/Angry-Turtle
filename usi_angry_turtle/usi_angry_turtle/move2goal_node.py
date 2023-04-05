@@ -49,7 +49,8 @@ class Move2GoalNode(Node):
         
         return self.done_future
 
-    
+
+    #to get the current location of turtle2
     def get_pose_turtle2(self, msg):
         """Callback called every time a new Pose message is received by the subscriber. - turtle 2"""
         self.current_pose2 = msg
@@ -69,7 +70,13 @@ class Move2GoalNode(Node):
         #the state of the turtle 1 (our main turtle)
         isAngry = 0
         isWriting = 0
-        isReturing = 0
+        isReturning = 0
+
+        #hardcoding inital position
+        self.initial_position = Pose()
+        self.initial_position.x = float(5.54445)
+        self.initial_position.y = float(5.54445)
+
 
         
         if self.current_pose is None:
@@ -87,28 +94,52 @@ class Move2GoalNode(Node):
             # linear velocity along the x-axis (forward) and angular velocity along the z-axis (yaw angle)
             
             cmd_vel = Twist()
-
+            isWriting = 1
+            self.get_logger().info("Turtle is writing")
             cmd_vel.linear.x = self.linear_vel(self.goal_pose, self.current_pose)
             cmd_vel.angular.z = self.angular_vel(self.goal_pose, self.current_pose) 
             self.vel_publisher.publish(cmd_vel)
 
-            #if the distance of the turtle1 and turtle 2 is less than 2
-            if self.euclidean_distance(self.current_pose, self.current_pose2) > 2:
+            # #if the distance of the turtle1 and turtle 2 is less than 1
+            if self.euclidean_distance(self.current_pose, self.current_pose2) >1: #k2
                 #changed the turtle's state to be angry
                 isAngry = 1
                 self.get_logger().info("Turtle is angry")
 
                 # Stop the turtle from writing
                 cmd_vel = Twist() 
+                isWriting = 0
                 cmd_vel.linear.x = 0.0
                 cmd_vel.angular.z = 0.0
                 self.vel_publisher.publish(cmd_vel)
 
+
                 #start pursuing the offender - go to the location of the spawned turtle
-                self.current_pose = self.current_pose2
+                cmd_vel = Twist() 
+
+                #made the goal_pose the current location of the turtle2
+                cmd_vel.linear.x = self.linear_vel(self.current_pose2, self.current_pose) 
+                cmd_vel.angular.z = self.angular_vel(self.current_pose2, self.current_pose) 
+                self.vel_publisher.publish(cmd_vel)
+                self.get_logger().info("Turtle is pursuing other turtle")
+
+                #k1 < k2 to the offending turtle
+                if self.euclidean_distance(self.current_pose, self.current_pose2) > 0.5: #k1
+                    isReturning = 1
+                    
+                    cmd_vel = Twist() 
+
+                    #go to the initial position
+                    cmd_vel.linear.x = self.linear_vel(self.initial_position, self.current_pose) 
+                    cmd_vel.angular.z = self.angular_vel(self.initial_position, self.current_pose) 
+                    self.vel_publisher.publish(cmd_vel)
+                    self.get_logger().info("Turtle is returning")
+
+         
+                
             
 
-            
+            ##DIDN'T WORK AS EXPECTED - DONE MANUALLY
             # #write S
             # cmd_vel.linear.x = self.linear_vel(self.goal_pose, self.current_pose)
             # cmd_vel.angular.z = self.angular_vel(self.goal_pose, self.current_pose)
@@ -138,7 +169,6 @@ class Move2GoalNode(Node):
             # cmd_vel.linear.x = float(4)
             # cmd_vel.linear.y = float(5.544445)
             # cmd_vel.angular.z = float(0)
-
 
 
             # #write U
